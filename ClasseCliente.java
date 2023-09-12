@@ -49,7 +49,17 @@ public String getEstadoCivil() {
 public void setEstadoCivil(String estadoCivil) {
 	this.estadoCivil = estadoCivil;
 }
-
+public void visualizar() {
+	System.out.println("\n\n************************************************************");
+	System.out.println("Dados do Cliente:");
+	System.out.println("****************************************************************");
+	System.out.println("Nome: " + this.nome + "\n");
+	System.out.println("Nacionalidade: " + this.nacionalidade + "\n");
+	System.out.println("Idade: " + this.idade + "\n");
+	System.out.println("Tipo de conta: " + this.tipoConta + "\n");
+	System.out.println("Estado Civil: " + this.estadoCivil + "\n");
+	 
+}
 
 
 }
