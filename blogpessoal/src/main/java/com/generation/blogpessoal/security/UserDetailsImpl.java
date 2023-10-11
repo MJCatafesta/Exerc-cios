@@ -16,9 +16,9 @@ public class UserDetailsImpl implements UserDetails {
 	private String password;
 	private List<GrantedAuthority> authorities;
 
-	public UserDetailsImpl(Usuario User) {
-		this.userName = User.getUsuario();
-		this.password = User.getSenha();
+	public UserDetailsImpl(Usuario user) {
+		this.userName = user.getUsuario();
+		this.password = user.getSenha();
 	}
 
 	public UserDetailsImpl() {
@@ -34,7 +34,8 @@ public class UserDetailsImpl implements UserDetails {
 		return password;
 	}
 
-	public String getUserName() {
+	@Override
+	public String getUsername() {
 		return userName;
 	}
 
@@ -57,10 +58,8 @@ public class UserDetailsImpl implements UserDetails {
 	public boolean isEnabled() {
 		return true;
 	}
+	
 
-	@Override
-	public String getUsername() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	
+	
 }
